@@ -71,16 +71,19 @@
   </build>
   <distributionManagement>
     <repository>
-      <id>default</id>
-      <name>Default Repository</name>
-      <url>file:///sites/org/osjava/www/releases/official/</url>
+      <id>release</id>
+      <name>Local Maven Cache</name>
+      <url>file:///${env.HOME}/maven-cache/repository/releases</url>
     </repository>
-    <site>
-      <id>default</id>
-      <name>Default Site</name>
-      <url>scp://www.generationjava.com/maven/norbert/sites/org/osjava/www/maven/norbert/</url>
-    </site>
   </distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
   <reporting>
     <plugins>
       <plugin>
